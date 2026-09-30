@@ -4,18 +4,18 @@
 
 package:
   name: {{ name }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://cpan.metacpan.org/authors/id/S/ST/STBEY/Date-Calc-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  noarch: generic
+  number: 1
   run_exports:
     weak:
       - {{ name }} ={{ version }}
-  skip: true  # [win]
 
 requirements:
   host:
@@ -43,9 +43,7 @@ test:
 about:
   home: http://metacpan.org/pod/Date-Calc
   license: GPL-1.0-or-later OR Artistic-1.0-Perl
-  license_file:
-    - {{ environ["PREFIX"] }}/man/man1/perlartistic.1
-    - {{ environ["PREFIX"] }}/man/man1/perlgpl.1
+  license_file: license
   summary: 'Gregorian calendar date calculations'
 
 extra:
