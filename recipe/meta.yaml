@@ -43,7 +43,7 @@ test:
 about:
   home: http://metacpan.org/pod/Date-Calc
   license: GPL-1.0-or-later OR Artistic-1.0-Perl
-  license_file: license
+  license_file: license/
   summary: 'Gregorian calendar date calculations'
 
 extra:
